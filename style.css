@@ -103,6 +103,14 @@ button { cursor: pointer; font-family: var(--font); }
 }
 .btn-outline-white:hover { background: var(--white); color: var(--black); }
 
+/* Dark outline — on white sections */
+.btn-outline-dark {
+  border-color: var(--black);
+  color: var(--black);
+  background: transparent;
+}
+.btn-outline-dark:hover { background: var(--black); color: var(--white); }
+
 .btn-full { width: 100%; }
 
 .btn-lg { padding: 18px 52px; font-size: 14px; }
