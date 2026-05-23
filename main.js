@@ -30,10 +30,24 @@
 /* ── Splash intro animation ── */
 (function splashIntro() {
   const splash = document.getElementById('splash');
-  if (!splash || typeof lottie === 'undefined') return;
+  if (!splash) return;
 
   const heroContent = document.querySelector('.hero-content');
   const heroDots    = document.querySelector('.hero-dots');
+
+  function skipSplash() {
+    splash.remove();
+    if (heroContent) heroContent.style.opacity = '1';
+    if (heroDots)    heroDots.style.opacity    = '1';
+  }
+
+  // Only play once per browser session
+  if (sessionStorage.getItem('mgp-splash-seen')) {
+    skipSplash();
+    return;
+  }
+
+  if (typeof lottie === 'undefined') { skipSplash(); return; }
 
   if (heroContent) heroContent.style.opacity = '0';
   if (heroDots)    heroDots.style.opacity    = '0';
@@ -47,6 +61,7 @@
   });
 
   anim.addEventListener('complete', () => {
+    sessionStorage.setItem('mgp-splash-seen', '1');
     splash.classList.add('fade-out');
     splash.addEventListener('transitionend', () => splash.remove(), { once: true });
 
