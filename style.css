@@ -631,23 +631,11 @@ button { cursor: pointer; font-family: var(--font); }
 }
 .alc-desc strong { color: var(--white); }
 
-/* Pricing guide */
-.pricing-guide {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-}
-.pricing-guide-preview {
-  background: var(--white);
-  padding: 12px;
-  border-radius: 4px;
-  width: 180px;
-  flex-shrink: 0;
-}
-.guide-thumb {
-  width: 100%;
-  height: auto;
-  display: block;
+.alc-btn {
+  display: inline-block;
+  margin-top: 14px;
+  font-size: 12px;
+  padding: 10px 20px;
 }
 
 /* =============================================
