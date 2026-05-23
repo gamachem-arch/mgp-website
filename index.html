@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MGP | Photographie Immobilière Gatineau - Ottawa - Real Estate Photography</title>
+  <meta name="description" content="MGP is your complete real estate media service in Gatineau and Ottawa. Professional HDR/Flash photos, 4K video walkthroughs, drone photography, and more.">
+  <meta property="og:title" content="MGP Real Estate Photography — Gatineau & Ottawa">
+  <meta property="og:image" content="images/og-home.webp">
+  <link rel="icon" href="images/mgpfavicon.png">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    (function() {
+      if (localStorage.getItem('mgp-lang') === 'en') return;
+      var langs = navigator.languages && navigator.languages.length
+        ? navigator.languages : [navigator.language || ''];
+      for (var i = 0; i < langs.length; i++) {
+        if (langs[i].toLowerCase().startsWith('fr')) {
+          window.location.replace('index-fr.html');
+          break;
+        }
+      }
+    })();
+  </script>
+</head>
+<body>
+
+<!-- =============================================
+     SPLASH / INTRO ANIMATION
+     ============================================= -->
+<div id="splash" aria-hidden="true">
+  <div id="splash-lottie"></div>
+</div>
+
+
+<!-- =============================================
+     NAVBAR
+     ============================================= -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo-link">
+      <img
+        src="images/MGP-WHITE-NAVBAR.png"
+        alt="MGP Real Estate Media"
+        class="nav-logo-img">
+    </a>
+
+    <div class="nav-links" id="navLinks">
+      <a href="#home"     class="nav-link">HOME</a>
+      <a href="#services" class="nav-link">SERVICES</a>
+      <a href="#pricing"  class="nav-link">PRICING</a>
+      <a href="portfolio.html" class="nav-link">PORTFOLIO</a>
+    </div>
+
+    <div class="nav-right">
+      <a href="https://www.instagram.com/mgpmedia.ca" target="_blank" rel="noopener" class="nav-instagram" aria-label="Instagram @mgpmedia.ca">
+        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" width="22" height="22" aria-hidden="true">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+          <circle cx="12" cy="12" r="4.5"/>
+          <circle cx="17.5" cy="6.5" r="1" fill="white" stroke="none"/>
+        </svg>
+      </a>
+      <a href="https://order.mgpmedia.ca/login" class="btn btn-nav">CLIENT LOGIN</a>
+      <a href="order.html" class="btn btn-nav btn-nav-primary">ORDER NOW</a>
+      <div class="lang-toggle">
+        <a href="/" class="lang-link lang-active" onclick="localStorage.setItem('mgp-lang','en')">EN</a>
+        <span class="lang-sep">|</span>
+        <a href="index-fr.html" class="lang-link" onclick="localStorage.setItem('mgp-lang','fr')">FR</a>
+      </div>
+    </div>
+
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+
+<!-- =============================================
+     HERO — full-viewport slider
+     ============================================= -->
+<section class="hero" id="home" aria-label="Hero">
+  <div class="hero-slides">
+    <div class="hero-slide active" style="background-image:url('images/hero-2.webp')"></div>
+    <div class="hero-slide" style="background-image:url('images/hero-3-cottage.webp')"></div>
+    <div class="hero-slide" style="background-image:url('images/hero-1-kitchen.webp')"></div>
+    <div class="hero-slide" style="background-image:url('images/hero-4.webp')"></div>
+    <div class="hero-slide" style="background-image:url('images/hero-5.webp')"></div>
+    <div class="hero-slide" style="background-image:url('images/hero-6.webp')"></div>
+    <div class="hero-slide" style="background-image:url('images/hero-7.webp')"></div>
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1 class="hero-headline">Everything you need for your next listing.<br>All under one roof.</h1>
+    <p class="hero-tagline">New clients get their first shoot <strong>25% OFF!</strong></p>
+    <a href="order.html" class="btn btn-outline-white hero-cta">book your shoot!</a>
+  </div>
+  <div class="hero-dots" id="heroDots" role="tablist" aria-label="Slide navigation"></div>
+</section>
+
+
+<!-- =============================================
+     SERVICES
+     ============================================= -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Our Services</h2>
+      <p class="section-subtitle">MGP is your complete real estate media partner. We provide photos, videos, floor plans, drone imagery, and more to help you market your listings effectively. Elevate your property's visual appeal and reach with our comprehensive services.</p>
+    </div>
+  </div>
+
+  <div class="tabs-bar" role="tablist">
+    <button class="tab-btn active" data-tab="photo" role="tab" aria-selected="true"  aria-controls="tab-photo">PHOTO</button>
+    <button class="tab-btn"        data-tab="video" role="tab" aria-selected="false" aria-controls="tab-video">VIDEO</button>
+    <button class="tab-btn"        data-tab="drone" role="tab" aria-selected="false" aria-controls="tab-drone">DRONE</button>
+  </div>
+
+  <!-- PHOTO TAB -->
+  <div class="tab-pane active" id="tab-photo" role="tabpanel">
+    <div class="container tab-content-inner">
+      <div class="tab-text">
+        <h3>Interior &amp; Exterior Photos with HDR/Flash</h3>
+        <p>Whether you're listing a lakefront cottage with vaulted ceilings, or a modest 2-bedroom condo, our experts utilize industry-leading HDR and Flash photography to showcase the property in the best light.</p>
+      </div>
+      <div class="tab-slider-wrap">
+        <div class="tab-slider" id="photoSlider">
+          <div class="tab-slide active" style="background-image:url('images/photo-slide-1.webp')"></div>
+          <div class="tab-slide" style="background-image:url('images/photo-slide-2.webp')"></div>
+          <div class="tab-slide" style="background-image:url('images/photo-slide-3.webp')"></div>
+          <div class="tab-slide" style="background-image:url('images/photo-slide-4.webp')"></div>
+          <div class="tab-slide" style="background-image:url('images/photo-slide-5.webp')"></div>
+          <div class="tab-slide" style="background-image:url('images/photo-slide-6.webp')"></div>
+          <div class="tab-slide" style="background-image:url('images/photo-slide-7.webp')"></div>
+          <div class="tab-slide" style="background-image:url('images/photo-slide-8.webp')"></div>
+          <div class="tab-slide" style="background-image:url('images/photo-slide-9.webp')"></div>
+        </div>
+        <button class="slider-arrow slider-prev" data-target="photoSlider" aria-label="Previous photo">&#8249;</button>
+        <button class="slider-arrow slider-next" data-target="photoSlider" aria-label="Next photo">&#8250;</button>
+        <div class="slider-dots" id="photoDots"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- VIDEO TAB -->
+  <div class="tab-pane" id="tab-video" role="tabpanel">
+    <div class="container tab-content-inner">
+      <div class="tab-text">
+        <h3>Video Walkthroughs for all platforms</h3>
+        <p>Long-form 4K cinematic walkthroughs to upload to Facebook or YouTube, or shorter attention-grabbing vertical videos for Instagram and Facebook Reels.</p>
+        <p>We've got all the platform &amp; options covered.</p>
+      </div>
+      <div class="tab-video-wrap">
+        <iframe src="https://order.mgpmedia.ca/videos/019dfaa4-c039-70ef-8406-f96e1d326efc" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- DRONE TAB -->
+  <div class="tab-pane" id="tab-drone" role="tabpanel">
+    <div class="container tab-content-inner">
+      <div class="tab-text">
+        <h3>Take your listings to new heights.</h3>
+        <p>Showcase the size of a lot, the overhead view of a backyard, or a more powerful view of the front of a property. Our pilots are officially certified with Transport Canada.</p>
+        <p>Almost everything is possible with Drone Photos &amp; Videos.</p>
+      </div>
+      <div class="tab-slider-wrap">
+        <div class="tab-slider" id="droneSlider">
+          <div class="tab-slide active" style="background-image:url('images/drone-slide-1.webp')"></div>
+          <div class="tab-slide" style="background-image:url('images/drone-slide-2.webp')"></div>
+          <div class="tab-slide" style="background-image:url('images/drone-slide-3.webp')"></div>
+          <div class="tab-slide" style="background-image:url('images/drone-slide-4.webp')"></div>
+          <div class="tab-slide" style="background-image:url('images/drone-slide-5.webp')"></div>
+          <div class="tab-slide" style="background-image:url('images/drone-slide-6.webp')"></div>
+          <div class="tab-slide" style="background-image:url('images/drone-slide-7.webp')"></div>
+          <div class="tab-slide" style="background-image:url('images/drone-slide-8.webp')"></div>
+          <div class="tab-slide" style="background-image:url('images/drone-slide-9.webp')"></div>
+          <div class="tab-slide" style="background-image:url('images/drone-slide-10.webp')"></div>
+        </div>
+        <button class="slider-arrow slider-prev" data-target="droneSlider" aria-label="Previous drone photo">&#8249;</button>
+        <button class="slider-arrow slider-next" data-target="droneSlider" aria-label="Next drone photo">&#8250;</button>
+        <div class="slider-dots" id="droneDots"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =============================================
+     PACKAGES
+     ============================================= -->
+<section class="packages" id="pricing">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Our Packages</h2>
+      <p class="section-subtitle">Every listing is unique, and we believe your media packages should reflect that. We have carefully crafted our packages to offer you more value while keeping costs down.</p>
+    </div>
+
+    <div class="packages-grid">
+
+      <!-- Social Media Package -->
+      <div class="pkg-card">
+        <img
+          src="images/pkg-social-media.webp"
+          alt="Aerial photo of a brick home — Social Media Package"
+          class="pkg-img">
+        <div class="pkg-body">
+          <h3 class="pkg-name">Social Media Package</h3>
+          <p class="pkg-desc">Supercharge your online presence! Includes our basic photo package and custom listing media tailored for Instagram and Facebook. Maximize your reach and impact today!</p>
+          <div class="pkg-price">
+            <span class="price-dollar">$</span>
+            <span class="price-num">375</span>
+            <div class="price-meta">
+              <span>PLUS TAX</span>
+              <span>SAVE $160+!</span>
+            </div>
+          </div>
+          <ul class="pkg-features">
+            <li>Interior &amp; Exterior Photos, no limit HDR/Flash technology</li>
+            <li>Instagram/Facebook 30–90 sec HD Reel</li>
+            <li>5× Vertical Photos for Instagram/Facebook Stories</li>
+            <li>Drone Photos &amp; Video</li>
+            <li>1–2 Day Turnaround</li>
+          </ul>
+          <a href="order.html" class="btn btn-dark btn-full">GET STARTED</a>
+        </div>
+      </div>
+
+      <!-- Photo + Drone Package — FEATURED (dark) -->
+      <div class="pkg-card pkg-featured">
+        <img
+          src="images/pkg-photo-drone.webp"
+          alt="Twilight aerial drone photo of a home surrounded by trees — Photo + Drone Package"
+          class="pkg-img">
+        <div class="pkg-body">
+          <h3 class="pkg-name">Photo + Drone Package</h3>
+          <p class="pkg-desc">Elevate your listings! This package combines Exterior Drone Photography with our basic photo package, adding a captivating perspective to your property. Reach new heights and captivate your audience!</p>
+          <div class="pkg-price">
+            <span class="price-dollar">$</span>
+            <span class="price-num">240</span>
+            <div class="price-meta">
+              <span>PLUS TAX</span>
+              <span>SAVE $109!</span>
+            </div>
+          </div>
+          <ul class="pkg-features">
+            <li>Interior &amp; Exterior HDR/Flash technology Photos, no limit</li>
+            <li>Exterior Drone Photos, no limit</li>
+            <li>1.25hr session</li>
+            <li>Next Day Delivery</li>
+            <li>Blue Sky Replacements</li>
+          </ul>
+          <a href="order.html" class="btn btn-white btn-full">GET STARTED</a>
+        </div>
+      </div>
+
+      <!-- Photo/Video/Drone Package -->
+      <div class="pkg-card">
+        <img
+          src="images/pkg-pro.webp"
+          alt="Luxury cottage interior with vaulted ceilings — Photo/Video/Drone Package"
+          class="pkg-img">
+        <div class="pkg-body">
+          <h3 class="pkg-name">Photo/Video/Drone Package</h3>
+          <p class="pkg-desc">The complete listing package! Our all-in-one bundle includes professional photos, captivating videos, and breathtaking drone footage. Showcase your property from every angle and leave a lasting impression on potential buyers.</p>
+          <div class="pkg-price">
+            <span class="price-dollar">$</span>
+            <span class="price-num">575</span>
+            <div class="price-meta">
+              <span>PLUS TAX</span>
+              <span>SAVE OVER $150!</span>
+            </div>
+          </div>
+          <ul class="pkg-features">
+            <li>Interior &amp; Exterior HDR/Flash technology Photos, no limit</li>
+            <li>4K Horizontal or Vertical Cinematic Video Walkthrough Tour</li>
+            <li>Licensed Music</li>
+            <li>Drone Photos &amp; Video</li>
+            <li>2–3 Day Turnaround</li>
+          </ul>
+          <a href="order.html" class="btn btn-dark btn-full">GET STARTED</a>
+        </div>
+      </div>
+
+    </div><!-- /packages-grid -->
+  </div>
+</section>
+
+
+<!-- =============================================
+     À LA CARTE SERVICES
+     ============================================= -->
+<section class="alacarte">
+  <div class="container">
+    <h2 class="alacarte-title">À La Carte Services</h2>
+
+    <div class="alacarte-grid">
+
+      <div class="alc-item">
+        <img src="images/alc-hdr-flash.webp"
+             alt="HDR/Flash interior photo of a kitchen" class="alc-img">
+        <h4 class="alc-name">HDR/Flash Photos</h4>
+        <p class="alc-desc">We provide simple flat rate pricing for our real estate images. Our basic photo package is priced at <strong>$175 +tax.</strong></p>
+      </div>
+
+      <div class="alc-item">
+        <img src="images/alc-drone.webp"
+             alt="Aerial drone photo of a home in the woods" class="alc-img">
+        <h4 class="alc-name">Drone</h4>
+        <p class="alc-desc">Our drone photo package is priced at just <strong>$125 +tax</strong>, with no limitations on photos. Drone video is <strong>$165 +tax</strong>, or bundle both for only <strong>$250 +tax.</strong></p>
+      </div>
+
+      <div class="alc-item">
+        <img src="images/alc-twilight.webp"
+             alt="Virtual twilight exterior photo of a home at dusk" class="alc-img">
+        <h4 class="alc-name">Twilight/Virtual Twilight</h4>
+        <p class="alc-desc">Virtual twilight photos at <strong>$25 +tax per photo.</strong> Standard twilight photos taken at dusk available at <strong>$165 +tax</strong> for a set of four photos.</p>
+      </div>
+
+      <div class="alc-item">
+        <iframe class="alc-video" src="https://player.vimeo.com/video/828461247?autoplay=0&title=0&byline=0&portrait=0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+        <h4 class="alc-name">Videos</h4>
+        <p class="alc-desc">4K cinematic listing video walkthroughs for Facebook, YouTube, and MLS — <strong>$300 +tax.</strong> Instagram &amp; Facebook vertical reels starting at <strong>$150 +tax.</strong> Maximize your online presence today!</p>
+      </div>
+
+      <div class="alc-item">
+        <img src="images/alc-floorplans.svg"
+             alt="Floor plan diagram" class="alc-img">
+        <h4 class="alc-name">Floor Plans</h4>
+        <p class="alc-desc">Accurate, professional floor plans help buyers understand the layout and flow of a property before they walk through the door — a must-have for any listing. <strong>Starting at $60 +tax.</strong></p>
+      </div>
+
+      <div class="alc-item">
+        <img src="images/alc-3dtours.png"
+             alt="Matterport 3D virtual tour preview" class="alc-img alc-img-clickable" data-matterport title="Click to explore the 3D tour">
+        <h4 class="alc-name">3D Virtual Tours</h4>
+        <p class="alc-desc">Immersive Matterport 3D tours let buyers explore every room at their own pace — 24/7, from anywhere. <strong>Starting at $199 +tax.</strong> <span style="text-decoration:underline;cursor:pointer;" data-matterport>Click the preview</span> to experience one live.</p>
+      </div>
+
+      <div class="alc-item">
+        <img src="images/alc-video.gif"
+             alt="Video reel preview animation" class="alc-img">
+        <h4 class="alc-name">&amp; More</h4>
+        <p class="alc-desc">Virtual staging, blue sky and green grass replacements, decluttering, and much more — we've got you covered.</p>
+      </div>
+
+    </div><!-- /alacarte-grid -->
+
+    <!-- Pricing guide download -->
+    <div class="pricing-guide">
+      <div class="pricing-guide-preview">
+        <img src="images/alc-more.webp"
+             alt="MGP 2023 Pricing Guide">
+      </div>
+      <a href="#" class="btn btn-outline-white">VIEW PRICING GUIDE</a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- =============================================
+     PORTFOLIO CTA
+     ============================================= -->
+<section class="portfolio-cta">
+  <h2>Want to see more?</h2>
+  <a href="portfolio.html" class="btn btn-dark btn-lg portfolio-cta-btn">CLICK HERE TO VIEW OUR PORTFOLIO! 🏠</a>
+</section>
+
+
+<!-- =============================================
+     PRE-FOOTER
+     ============================================= -->
+<div class="pre-footer">
+  <div class="container pre-footer-inner">
+    <img
+      src="images/MGP-LOGO-footer.webp"
+      alt="MGP Services de Médias Immobilier / Real Estate Media Services"
+      class="footer-logo-img">
+    <p class="pre-footer-text">Ready to schedule your first shoot? Simply click the button to create your client account in our portal! Start now and unlock a seamless booking experience.</p>
+    <a href="https://order.mgpmedia.ca/login" class="btn btn-white btn-lg">Create your MGP Client Account!</a>
+  </div>
+</div>
+
+
+<!-- =============================================
+     FOOTER
+     ============================================= -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-col footer-contact">
+      <h5 class="footer-col-title">CONTACT US</h5>
+      <a href="tel:8192300197" class="footer-link">Phone: (819) 230-0197</a>
+      <a href="mailto:info@mgpmedia.ca?subject=Question" class="footer-link">Email: info@mgpmedia.ca</a>
+    </div>
+    <div class="footer-col footer-social">
+      <h5 class="footer-col-title">SOCIAL</h5>
+      <a href="https://www.instagram.com/mgpmedia.ca" target="_blank" rel="noopener" class="footer-link">Instagram: @mgpmedia.ca</a>
+      <a href="https://www.facebook.com/mgprealestatemedia" target="_blank" rel="noopener" class="footer-link">Facebook: @mgprealestatemedia</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© Copyright Michel Gamache Photography 2023 All Rights Reserved &nbsp;·&nbsp; Icons by <a href="https://icons8.com/" target="_blank" rel="noopener">Icons8</a> &nbsp;·&nbsp; <a href="#">Cookies Policy</a></p>
+  </div>
+</footer>
+
+
+<!-- Back to top -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" width="18" height="18">
+    <polyline points="18 15 12 9 6 15"/>
+  </svg>
+</button>
+
+<!-- Matterport modal -->
+<div class="modal-overlay" id="matterportModal" role="dialog" aria-modal="true" aria-label="3D Virtual Tour">
+  <div class="modal-box">
+    <button class="modal-close" aria-label="Close tour">&times;</button>
+    <iframe src="" allowfullscreen allow="autoplay; fullscreen; web-share; xr-spatial-tracking;"></iframe>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

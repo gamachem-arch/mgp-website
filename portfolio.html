@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio — MGP Real Estate Photography Gatineau & Ottawa</title>
+  <meta name="description" content="Browse MGP's real estate photography portfolio — exterior, interior, drone photos, and 4K video walkthroughs from Gatineau and Ottawa.">
+  <link rel="icon" href="images/mgpfavicon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- =============================================
+     NAVBAR
+     ============================================= -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo-link">
+      <img
+        src="images/MGP-WHITE-NAVBAR.png"
+        alt="MGP Real Estate Media"
+        class="nav-logo-img">
+    </a>
+
+    <div class="nav-links" id="navLinks">
+      <a href="/" class="nav-link">HOME</a>
+    </div>
+
+    <div class="nav-right">
+      <a href="https://www.instagram.com/mgpmedia.ca" target="_blank" rel="noopener" class="nav-instagram" aria-label="Instagram @mgpmedia.ca">
+        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" width="22" height="22" aria-hidden="true">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+          <circle cx="12" cy="12" r="4.5"/>
+          <circle cx="17.5" cy="6.5" r="1" fill="white" stroke="none"/>
+        </svg>
+      </a>
+      <a href="https://order.mgpmedia.ca/login" class="btn btn-nav">CLIENT LOGIN</a>
+      <a href="order.html" class="btn btn-nav btn-nav-primary">ORDER NOW</a>
+    </div>
+
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+
+<!-- =============================================
+     PORTFOLIO HERO
+     ============================================= -->
+<div style="margin-top: var(--nav-h);">
+  <div class="portfolio-hero">
+    <h1>What we've been up to 👀</h1>
+    <p>Please click an item below to see our most recent work! Showcasing a mix of <strong>Exterior</strong>, <strong>Interior</strong>, and <strong>Drone photos</strong>. There's a few twilight ones in there as well, we love twilight shoots!</p>
+    <p>Our videos section showcases our 4K Horizontal <strong>Cinematic Walkthrough Tours</strong>, as well as our Regular and Advanced <strong>Reels</strong>.</p>
+
+    <div class="portfolio-actions">
+      <button id="showPhotos" class="btn btn-outline-dark" style="border-color: var(--black); color: var(--black); min-width: 200px; padding: 16px 40px; font-size: 14px;">PHOTOS</button>
+      <button id="showVideos" class="btn btn-outline-dark" style="border-color: var(--black); color: var(--black); min-width: 200px; padding: 16px 40px; font-size: 14px;">VIDEOS</button>
+    </div>
+  </div>
+
+  <!-- PHOTO GRID -->
+  <!--
+    To add photos: copy the pattern below for each image.
+    Replace the src with your actual image URL.
+    The data-src attribute is used by the lightbox.
+
+    OPTION A — Host on GitHub (free, works for <100MB total):
+      Upload images to your repo and use the raw GitHub URL.
+
+    OPTION B — Google Photos shared album:
+      Replace this entire section with a Google Photos embed.
+
+    OPTION C — Keep using Webflow CDN (temporarily):
+      Use the CDN URLs until you migrate.
+  -->
+  <div class="portfolio-grid" id="photoGrid">
+
+    <!-- Add your portfolio images here. Example: -->
+    <div class="portfolio-item" data-src="images/hero-1-kitchen.webp">
+      <img src="images/hero-1-kitchen.webp" alt="Real estate interior kitchen">
+    </div>
+    <div class="portfolio-item" data-src="images/hero-2.webp">
+      <img src="images/hero-2.webp" alt="Real estate interior">
+    </div>
+    <div class="portfolio-item" data-src="images/hero-3-cottage.webp">
+      <img src="images/hero-3-cottage.webp" alt="Cottage interior">
+    </div>
+    <div class="portfolio-item" data-src="images/photo-slide-4.webp">
+      <img src="images/photo-slide-4.webp" alt="Interior real estate photo">
+    </div>
+    <div class="portfolio-item" data-src="images/photo-slide-1.webp">
+      <img src="images/photo-slide-1.webp" alt="Exterior real estate photo">
+    </div>
+    <div class="portfolio-item" data-src="images/pkg-photo-drone.webp">
+      <img src="images/pkg-photo-drone.webp" alt="Aerial drone twilight photo">
+    </div>
+    <div class="portfolio-item" data-src="images/drone-slide-1.webp">
+      <img src="images/drone-slide-1.webp" alt="Drone aerial photo Gatineau">
+    </div>
+    <div class="portfolio-item" data-src="images/drone-slide-2.webp">
+      <img src="images/drone-slide-2.webp" alt="HDR drone aerial photo">
+    </div>
+    <div class="portfolio-item" data-src="images/drone-slide-3.webp">
+      <img src="images/drone-slide-3.webp" alt="Aerial drone photo Gatineau">
+    </div>
+    <div class="portfolio-item" data-src="images/pkg-pro.webp">
+      <img src="images/pkg-pro.webp" alt="Luxury cottage interior">
+    </div>
+    <div class="portfolio-item" data-src="images/alc-twilight.webp">
+      <img src="images/alc-twilight.webp" alt="Virtual twilight photo">
+    </div>
+    <div class="portfolio-item" data-src="images/photo-slide-8.webp">
+      <img src="images/photo-slide-8.webp" alt="Interior real estate photo">
+    </div>
+
+  </div><!-- /photo-grid -->
+
+
+  <!-- VIDEO SECTION -->
+  <!--
+    To add videos: replace the placeholder iframes below
+    with your actual Vimeo embed codes.
+    Get the embed code from vimeo.com → your video → Share → Embed
+  -->
+  <div class="portfolio-videos" id="videoList">
+    <div class="video-block"><iframe src="https://order.mgpmedia.ca/videos/019dfaa4-c039-70ef-8406-f96e1d326efc" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+    <div class="video-block"><iframe src="https://order.mgpmedia.ca/videos/019e20bc-a984-737e-b8d3-c2e4ec78e31c" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+    <div class="video-block"><iframe src="https://order.mgpmedia.ca/videos/019de8ff-ca9e-7265-adae-ac8dd7f0d59e" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+    <div class="video-block"><iframe src="https://order.mgpmedia.ca/videos/019d9f8d-7dad-71c3-bf09-b0493057fd4c" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+    <div class="video-block"><iframe src="https://order.mgpmedia.ca/videos/019db9d2-2d14-71e6-8256-9d448368bee5" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+    <div class="video-block"><iframe src="https://order.mgpmedia.ca/videos/019d6ca3-7027-706e-99dc-075b2fc8cc4f" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+    <div class="video-block"><iframe src="https://order.mgpmedia.ca/videos/019d85f9-2275-73e9-845e-bcd8e1e1191d" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+    <div class="video-block"><iframe src="https://order.mgpmedia.ca/videos/019cd2a6-c1fd-73a9-830a-f27e10d7fea7" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+    <div class="video-block"><iframe src="https://order.mgpmedia.ca/videos/019cfa3e-7587-709b-9e87-1b5e0068fca1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+    <div class="video-block"><iframe src="https://order.mgpmedia.ca/videos/019c48e2-bf1e-7157-8d29-eb8cdc35a682" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+    <div class="video-block"><iframe src="https://order.mgpmedia.ca/videos/0199a656-5593-7129-8f9c-d07a35fc2b12" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+    <div class="video-block"><iframe src="https://order.mgpmedia.ca/videos/01994b86-8cee-708a-a582-249144f3c535" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+    <div class="video-block"><iframe src="https://order.mgpmedia.ca/videos/0198ca76-0eaa-70d1-acc0-6e2e623216ec" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+    <div class="video-block"><iframe src="https://order.mgpmedia.ca/videos/01992bf8-4283-715b-a7b9-535241cb6064" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+    <div class="video-block"><iframe src="https://order.mgpmedia.ca/videos/01988993-830e-71b1-8935-8f03cb9f908e" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+    <div class="video-block"><iframe src="https://order.mgpmedia.ca/videos/0199270a-0b0e-701f-a890-b22271c72357" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+    <div class="video-block"><iframe src="https://order.mgpmedia.ca/videos/01987751-4ae5-7375-a1b3-fcc9c85b7eb8" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+    <div class="video-block"><iframe src="https://order.mgpmedia.ca/videos/01982f8f-d185-721a-be35-19e5a0024feb" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+    <div class="video-block"><iframe src="https://order.mgpmedia.ca/videos/0198081b-6f13-73ff-bd4b-4262c85ff1e5" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+  </div><!-- /portfolio-videos -->
+</div>
+
+
+<!-- =============================================
+     LIGHTBOX
+     ============================================= -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo lightbox">
+  <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
+  <button class="lightbox-prev" aria-label="Previous photo">&#8249;</button>
+  <img class="lightbox-img" src="" alt="Portfolio photo">
+  <button class="lightbox-next" aria-label="Next photo">&#8250;</button>
+</div>
+
+
+<!-- =============================================
+     PRE-FOOTER
+     ============================================= -->
+<div class="pre-footer">
+  <div class="container pre-footer-inner">
+    <img
+      src="images/MGP-LOGO-footer.webp"
+      alt="MGP Services de Médias Immobilier / Real Estate Media Services"
+      class="footer-logo-img">
+    <p class="pre-footer-text">Ready to schedule your first shoot? Simply click the button to create your client account in our portal! Start now and unlock a seamless booking experience.</p>
+    <a href="https://order.mgpmedia.ca/login" class="btn btn-white btn-lg">Create your MGP Client Account!</a>
+  </div>
+</div>
+
+
+<!-- =============================================
+     FOOTER
+     ============================================= -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-col footer-contact">
+      <h5 class="footer-col-title">CONTACT US</h5>
+      <a href="tel:8192300197" class="footer-link">Phone: (819) 230-0197</a>
+      <a href="mailto:info@mgpmedia.ca?subject=Question" class="footer-link">Email: info@mgpmedia.ca</a>
+    </div>
+    <div class="footer-col footer-social">
+      <h5 class="footer-col-title">SOCIAL</h5>
+      <a href="https://www.instagram.com/mgpmedia.ca" target="_blank" rel="noopener" class="footer-link">Instagram: @mgpmedia.ca</a>
+      <a href="https://www.facebook.com/mgprealestatemedia" target="_blank" rel="noopener" class="footer-link">Facebook: @mgprealestatemedia</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© Copyright Michel Gamache Photography 2023 All Rights Reserved &nbsp;·&nbsp; Icons by <a href="https://icons8.com/" target="_blank" rel="noopener">Icons8</a> &nbsp;·&nbsp; <a href="#">Cookies Policy</a></p>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

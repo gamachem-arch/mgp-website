@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order — MGP Real Estate Photography Gatineau & Ottawa</title>
+  <meta name="description" content="Book your real estate photography session with MGP. Professional HDR/Flash photos, 4K video walkthroughs, drone photography in Gatineau and Ottawa.">
+  <link rel="icon" href="images/mgpfavicon.png">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .order-wrap {
+      margin-top: var(--nav-h);
+      min-height: calc(100vh - var(--nav-h));
+      padding: 60px 24px 80px;
+    }
+    .order-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .order-header h1 {
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .order-header p {
+      font-size: 16px;
+      color: #555;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+    .order-embed {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+
+<!-- =============================================
+     NAVBAR
+     ============================================= -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo-link">
+      <img
+        src="images/MGP-WHITE-NAVBAR.png"
+        alt="MGP Real Estate Media"
+        class="nav-logo-img">
+    </a>
+
+    <div class="nav-links" id="navLinks">
+      <a href="/" class="nav-link">HOME</a>
+      <a href="/#services" class="nav-link">SERVICES</a>
+      <a href="/#pricing" class="nav-link">PRICING</a>
+      <a href="portfolio.html" class="nav-link">PORTFOLIO</a>
+    </div>
+
+    <div class="nav-right">
+      <a href="https://www.instagram.com/mgpmedia.ca" target="_blank" rel="noopener" class="nav-instagram" aria-label="Instagram @mgpmedia.ca">
+        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" width="22" height="22" aria-hidden="true">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+          <circle cx="12" cy="12" r="4.5"/>
+          <circle cx="17.5" cy="6.5" r="1" fill="white" stroke="none"/>
+        </svg>
+      </a>
+      <a href="https://order.mgpmedia.ca/login" class="btn btn-nav">CLIENT LOGIN</a>
+      <a href="order.html" class="btn btn-nav btn-nav-primary">ORDER NOW</a>
+      <div class="lang-toggle">
+        <a href="/" class="lang-link lang-active" onclick="localStorage.setItem('mgp-lang','en')">EN</a>
+        <span class="lang-sep">|</span>
+        <a href="index-fr.html" class="lang-link" onclick="localStorage.setItem('mgp-lang','fr')">FR</a>
+      </div>
+    </div>
+
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+
+<!-- =============================================
+     ORDER EMBED
+     ============================================= -->
+<div class="order-wrap">
+  <div class="order-header">
+    <h1>Let's get shooting! 📸</h1>
+    <p>Follow the form below to get your order in the system. Already have an account? <a href="https://order.mgpmedia.ca/login" style="color:var(--black);font-weight:600;">Login here</a> to manage your past and current orders.</p>
+  </div>
+
+  <div class="order-embed">
+    <div data-embed-url="https://order.mgpmedia.ca/order">
+      <script src="https://order.mgpmedia.ca/embeds/mgpmedia"></script>
+    </div>
+  </div>
+</div>
+
+
+<!-- =============================================
+     FOOTER
+     ============================================= -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-col footer-contact">
+      <h5 class="footer-col-title">CONTACT US</h5>
+      <a href="tel:8192300197" class="footer-link">Phone: (819) 230-0197</a>
+      <a href="mailto:info@mgpmedia.ca?subject=Question" class="footer-link">Email: info@mgpmedia.ca</a>
+    </div>
+    <div class="footer-col footer-social">
+      <h5 class="footer-col-title">SOCIAL</h5>
+      <a href="https://www.instagram.com/mgpmedia.ca" target="_blank" rel="noopener" class="footer-link">Instagram: @mgpmedia.ca</a>
+      <a href="https://www.facebook.com/mgprealestatemedia" target="_blank" rel="noopener" class="footer-link">Facebook: @mgprealestatemedia</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© Copyright Michel Gamache Photography 2023 All Rights Reserved &nbsp;·&nbsp; Icons by <a href="https://icons8.com/" target="_blank" rel="noopener">Icons8</a> &nbsp;·&nbsp; <a href="#">Cookies Policy</a></p>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

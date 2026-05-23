@@ -1,0 +1,8 @@
+# Dev artifacts
+download-images.sh
+animation_screenrecord.mov
+.DS_Store
+
+# Editor
+.vscode/
+*.code-workspace
